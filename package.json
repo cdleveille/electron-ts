@@ -1,0 +1,32 @@
+{
+  "name": "electron-ts",
+  "version": "1.0.0",
+  "repository": "https://github.com/cdleveille/electron-ts.git",
+  "author": "Chris Leveille <cdleveille@gmail.com>",
+  "license": "MIT",
+  "main": "build/main.js",
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx . && prettier --check .",
+    "format": "eslint --fix --ext .js,.jsx,.ts,.tsx . && prettier --write .",
+    "build": "tsc",
+    "start": "electron .",
+    "release-win": "electron-packager --platform=win32 --arch=x64 --out=release .",
+    "release-mac": "electron-packager --platform=darwin --out=release .",
+    "release-linux": "electron-packager --platform=linux --out=release ."
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "electron": "^21.0.1",
+    "electron-packager": "^16.0.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
