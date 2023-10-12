@@ -4,7 +4,7 @@
   "repository": "https://github.com/cdleveille/electron-ts.git",
   "author": "Chris Leveille <cdleveille@gmail.com>",
   "license": "MIT",
-  "main": "build/main.js",
+  "main": "build/index.js",
   "scripts": {
     "prepare": "husky install",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx . && prettier --check .",

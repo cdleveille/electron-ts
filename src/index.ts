@@ -8,8 +8,9 @@ let commandLineUrl;
 if (app.commandLine.hasSwitch("url")) {
 	commandLineUrl = app.commandLine.getSwitchValue("url");
 }
+app.commandLine.appendSwitch("ignore-certificate-errors");
 
-const DEFAULT_URL = "https://www.electronjs.org";
+const DEFAULT_URL = "";
 const URL = commandLineUrl || argv[2] || process.env.URL || DEFAULT_URL;
 
 const createWindow = () => {
